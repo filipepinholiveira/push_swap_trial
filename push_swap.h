@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:59:21 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/05 16:28:47 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/05/05 18:47:59 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ typedef struct s_stack
 
 int	ft_isdigit(int c);
 int	check_params(int ac, char **av);
-int	ft_atoi(char *str);
+size_t	ft_atoi(char *str);
 
 #endif

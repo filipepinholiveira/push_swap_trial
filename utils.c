@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 18:04:54 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/05 18:26:59 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:34:07 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	check_params(int ac, char **av)
 {
 	int i;
 	int j;
+	
 
 	i = 1;
 	while (i < ac)
@@ -30,7 +31,8 @@ int	check_params(int ac, char **av)
 				}
 				j++;
 			}
-			if ((ft_atoi(av[i]) == INT_MIN || ft_atoi(av[i]) == INT_MAX))
+			long int nbr = ft_atoi(av[i]);
+			if ((nbr < INT_MIN) || (nbr > INT_MAX))
 			{
 				printf("NBR is too big or too small\n");
 				return (0);
@@ -49,11 +51,11 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-int	ft_atoi(char *str)
+size_t	ft_atoi(char *str)
 {
-	int	i;
-	int	n;
-	int	sinal;
+	size_t	i;
+	size_t	n;
+	size_t	sinal;
 
 	i = 0;
 	sinal = 1;
