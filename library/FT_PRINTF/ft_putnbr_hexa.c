@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_hexa.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 16:59:21 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/08 18:41:44 by fpinho-d         ###   ########.fr       */
+/*   Created: 2023/01/25 18:29:28 by fpinho-d          #+#    #+#             */
+/*   Updated: 2023/01/26 18:18:30 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
-#include "library/LIBFT/ft_libft/libft.h"
-
-typedef struct s_stack
+int	ft_count_hexa(size_t a)
 {
-	int *array;//34 54 67
-	int size;
-	int p_top;
-} t_stack;
+	int	len;
 
-int	ft_isdigit(int c);
-int	check_params(int ac, char **av);
-size_t	ft_atoi(char *str);
-void	sa(t_stack *stack_a);
+	len = 1;
+	while (a > 15)
+	{
+		a = a / 16;
+		len++;
+	}
+	return (len);
+}
 
-#endif
+int	ft_putnbr_hexa(size_t x, char *base)
+{
+	int	len;
+
+	len = ft_count_hexa(x);
+	if (x > 15)
+	{
+		ft_putnbr_hexa(x / 16, base);
+		ft_putnbr_hexa(x % 16, base);
+	}
+	else
+		ft_putchar(base[x]);
+	return (len);
+}

@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_f.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 16:59:21 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/08 18:41:44 by fpinho-d         ###   ########.fr       */
+/*   Created: 2023/05/08 18:29:58 by fpinho-d          #+#    #+#             */
+/*   Updated: 2023/05/08 18:40:33 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
-#include "library/LIBFT/ft_libft/libft.h"
 
-typedef struct s_stack
+void	sa(t_stack *stack_a)
 {
-	int *array;//34 54 67
-	int size;
-	int p_top;
-} t_stack;
+	int temp;
 
-int	ft_isdigit(int c);
-int	check_params(int ac, char **av);
-size_t	ft_atoi(char *str);
-void	sa(t_stack *stack_a);
-
-#endif
+	temp = stack_a->array[0];
+	stack_a->array[0] = stack_a->array[1];
+	stack_a->array[1] = temp;
+}

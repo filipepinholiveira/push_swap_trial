@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_hexa_ptr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 16:59:21 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/08 18:41:44 by fpinho-d         ###   ########.fr       */
+/*   Created: 2023/01/26 16:12:43 by fpinho-d          #+#    #+#             */
+/*   Updated: 2023/01/26 18:16:53 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
-#include "library/LIBFT/ft_libft/libft.h"
-
-typedef struct s_stack
+int	ft_putnbr_hexa_ptr(size_t x, char *base)
 {
-	int *array;//34 54 67
-	int size;
-	int p_top;
-} t_stack;
+	int	len;
 
-int	ft_isdigit(int c);
-int	check_params(int ac, char **av);
-size_t	ft_atoi(char *str);
-void	sa(t_stack *stack_a);
-
-#endif
+	if (x == 0)
+		return (write(1, "(nil)", 5));
+	ft_putstr("0x");
+	len = ft_putnbr_hexa(x, base);
+	return (len + 2);
+}
