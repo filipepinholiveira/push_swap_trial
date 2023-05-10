@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:59:21 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/08 18:41:44 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/05/10 18:47:01 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int	ft_isdigit(int c);
 int	check_params(int ac, char **av);
 size_t	ft_atoi(char *str);
 void	sa(t_stack *stack_a);
+t_stack	*ft_index(t_stack *stack, int ac);
 
 #endif
