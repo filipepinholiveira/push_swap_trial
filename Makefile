@@ -9,9 +9,8 @@
 
 CC          = cc
 SRCS        = push_swap.c \
-			  check_param_utils.c \
-			  sort_array_utils.c \
-			  sort_f.c
+			  sa.c 
+			  
 
 CFLAGS      = -Wall -Wextra -Werror
 

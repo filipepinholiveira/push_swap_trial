@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/15 18:51:02 by fpinho-d         ###   ########.fr       */
+/*   Created: 2023/05/15 15:48:56 by fpinho-d          #+#    #+#             */
+/*   Updated: 2023/05/15 16:52:00 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int ac, char **av)
-{
-	t_stack_node *a;
-	t_stack_node *b;
-
-	//a = NULL;
-	b = NULL;
-
-	a = malloc (sizeof(t_stack_node));
-	a->next = malloc (sizeof(t_stack_node));
-	a->data = 5;
-	a->next->data = 10;
-	a->next->next->data = NULL;
-	a->prev = NULL;
+void	sa(t_stack_node* a, int flag)
+{	
+	if (!a || a->next == NULL)
+		return;
 	
-	
+	t_stack_node *ptr_a;
+	ptr_a = a;
+
+	int temp;
+
+	temp = ptr_a->data;
+	ptr_a->data = a->next->data;
+	a->next->data = temp;
+	if (flag == 0)
+		printf("sa\n");
 }
