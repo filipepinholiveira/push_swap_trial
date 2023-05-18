@@ -10,10 +10,13 @@
 typedef struct s_stack_node
 {
 	int data;
-	struct s_stack *prev;
-	struct s_stack *next;
+	struct s_stack_node *prev;
+	struct s_stack_node *next;
 } t_stack_node;
 
 void	sa(t_stack_node* a, int flag);
+void	sb(t_stack_node *b, int flag);
+void	ss(t_stack_node *a, t_stack_node *b, int flag);
+void	pa(t_stack_node **a_head, t_stack_node **b_head, int flag);
 
 #endif

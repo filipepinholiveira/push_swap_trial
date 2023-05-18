@@ -9,7 +9,10 @@
 
 CC          = cc
 SRCS        = push_swap.c \
-			  sa.c 
+			  sa.c \
+			  sb.c \
+			  ss.c \
+			  pa.c
 			  
 
 CFLAGS      = -Wall -Wextra -Werror
@@ -24,7 +27,7 @@ $(LIBRARY):
 	make -C library
 
 $(NAME): $(SRCS)
-	cc $(SRCS) $(LIBRARY) -o $(NAME)
+	cc -g $(SRCS) $(LIBRARY) -o $(NAME)
 
 clean:
 	make clean -C library
