@@ -19,5 +19,6 @@ void	sb(t_stack_node *b, int flag);
 void	ss(t_stack_node *a, t_stack_node *b, int flag);
 void	pa(t_stack_node **a_head, t_stack_node **b_head, int flag);
 void	pb(t_stack_node **a_head, t_stack_node **b_head, int flag);
+void	ra(t_stack_node *a, int flag);
 
 #endif

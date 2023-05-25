@@ -13,7 +13,8 @@ SRCS        = push_swap.c \
 			  sb.c \
 			  ss.c \
 			  pa.c \
-			  pb.c
+			  pb.c \
+			  ra.c
 			  
 
 CFLAGS      = -Wall -Wextra -Werror

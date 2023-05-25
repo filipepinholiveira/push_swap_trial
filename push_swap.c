@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/24 18:57:39 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/05/25 18:03:48 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ int main(int ac, char **av)
 	// printf("valor inicial top b: %d\n", (*b_head)->data);
 	puts("");
 		
-	pa(a_head, b_head, 0);
-	pa(a_head, b_head, 0);
-	//pa(a_head, b_head, 0);
+	pb(a_head, b_head, 0);
+	pb(a_head, b_head, 0);
+	pb(a_head, b_head, 0);
 
 	puts("");
 	printf("Lista A: \n");
