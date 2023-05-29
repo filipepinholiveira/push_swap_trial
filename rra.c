@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ra.c                                               :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/25 17:57:06 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/29 18:07:18 by fpinho-d         ###   ########.fr       */
+/*   Created: 2023/05/29 18:12:45 by fpinho-d          #+#    #+#             */
+/*   Updated: 2023/05/29 18:47:42 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//ra (rotate a): Shift up all elements of stack a by 1.
-//The first element becomes the last one
-
-
 #include "push_swap.h"
 
-void	ra(t_stack_node **a_head, int flag)
+void	rra(t_stack_node **a_head, int flag)
 {
 	if (*a_head == NULL || (*a_head)->next == NULL)
 		return ;
-	t_stack_node *temp = (*a_head);
-	(*a_head) = (*a_head)->next;
 	t_stack_node *current = (*a_head);
 	while (current->next != NULL)
 	{
 		current = current->next;
 	}
-	current->next = temp;
-	temp->next = NULL;
+	t_stack_node *temp = current;
+	current->prev->next = NULL;
+	temp->next = (*a_head);
+	(*a_head) = temp;
+	
 	if (flag == 0)
-		printf("ra\n");
+		printf("rra\n");
+	
 }

@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/25 18:03:48 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/05/29 18:46:08 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,28 @@ int main(int ac, char **av)
 	a = malloc (sizeof(t_stack_node));
 	a->next = malloc (sizeof(t_stack_node));
 	a->next->next = malloc (sizeof(t_stack_node));
+	a->next->next->next = malloc (sizeof(t_stack_node));
 	a->data = 1;
 	a->prev = NULL;
 	a->next->data = 2;
 	a->next->prev = a;
 	a->next->next->data = 3;
 	a->next->next->prev = a->next;
-	a->next->next->next = NULL;
+	a->next->next->next->data = 4;
+	a->next->next->next->next = NULL;
 	
 	b = malloc (sizeof(t_stack_node));
 	b->next = malloc (sizeof(t_stack_node));
 	b->next->next = malloc (sizeof(t_stack_node));
-	b->data = 4;
+	b->next->next->next = malloc (sizeof(t_stack_node));
+	b->data = 5;
 	b->prev = NULL;
-	b->next->data = 5;
+	b->next->data = 6;
 	b->next->prev = b;
-	b->next->next->data = 6;
+	b->next->next->data = 7;
 	b->next->next->prev = b->next;
-	b->next->next->next = NULL;
+	b->next->next->next->data = 8;
+	b->next->next->next->next = NULL;
 	//b->next = NULL;
 
 	
@@ -54,9 +58,9 @@ int main(int ac, char **av)
 	*b_head = b;
 	
 	
-	 printf("Lista A: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n", a->data, a->next->data, a->next->next->data);
+	 printf("Lista A: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n4o valor: %d\n", a->data, a->next->data, a->next->next->data, a->next->next->next->data);
 	 puts("");
-	 printf("Lista B: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n", b->data, b->next->data, b->next->next->data);
+	 printf("Lista B: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n4o valor: %d\n", b->data, b->next->data, b->next->next->data, b->next->next->next->data);
 	// sa(a, 0);
 	// printf("1o valor: %d\n2o valor: %d\n3o valor: %d\n", a->data, a->next->data, a->next->next->data);
 	// sb(b, 0);
@@ -70,9 +74,9 @@ int main(int ac, char **av)
 	// printf("valor inicial top b: %d\n", (*b_head)->data);
 	puts("");
 		
-	pb(a_head, b_head, 0);
-	pb(a_head, b_head, 0);
-	pb(a_head, b_head, 0);
+	rra(a_head, 0);
+	//rb(b_head, 0);
+	//rr(a_head, b_head, 0);
 
 	puts("");
 	printf("Lista A: \n");
