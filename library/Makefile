@@ -5,18 +5,17 @@
 #           action
 
 CC			= cc
-SRCS		= $(shell find . -name '*.c')
 
 CFLAGS		= -Wall -Wextra -Werror
 
 NAME		= library.a
 
-OBJECTS		= $(SRCS:.c=.o)
-
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar rc $(NAME) $(OBJECTS)
+$(NAME):
+	make -C FT_PRINTF
+	make -C LIBFT/ft_libft
+	ar rcT $(NAME) FT_PRINTF/libftprintf.a LIBFT/ft_libft/libft.a 
 
 clean:
 	rm -rf $(OBJECTS)

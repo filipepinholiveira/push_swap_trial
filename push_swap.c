@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/29 18:46:08 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:11:56 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int main(int ac, char **av)
 	a->next->next->data = 3;
 	a->next->next->prev = a->next;
 	a->next->next->next->data = 4;
+	a->next->next->next->prev = a->next->next;
 	a->next->next->next->next = NULL;
 	
 	b = malloc (sizeof(t_stack_node));
@@ -46,6 +47,7 @@ int main(int ac, char **av)
 	b->next->next->data = 7;
 	b->next->next->prev = b->next;
 	b->next->next->next->data = 8;
+	b->next->next->next->prev = b->next->next;
 	b->next->next->next->next = NULL;
 	//b->next = NULL;
 
@@ -58,7 +60,7 @@ int main(int ac, char **av)
 	*b_head = b;
 	
 	
-	 printf("Lista A: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n4o valor: %d\n", a->data, a->next->data, a->next->next->data, a->next->next->next->data);
+	 ft_printf("Lista A: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n4o valor: %d\n", a->data, a->next->data, a->next->next->data, a->next->next->next->data);
 	 puts("");
 	 printf("Lista B: \n1o valor: %d\n2o valor: %d\n3o valor: %d\n4o valor: %d\n", b->data, b->next->data, b->next->next->data, b->next->next->next->data);
 	// sa(a, 0);
@@ -75,6 +77,8 @@ int main(int ac, char **av)
 	puts("");
 		
 	rra(a_head, 0);
+	rrb(b_head, 0);
+	rrr(a_head, b_head, 0);
 	//rb(b_head, 0);
 	//rr(a_head, b_head, 0);
 

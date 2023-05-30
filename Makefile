@@ -17,10 +17,11 @@ SRCS        = push_swap.c \
 			  ra.c \
 			  rb.c \
 			  rr.c \
-			  rra.c
-			  
+			  rra.c \
+			  rrb.c \
+			  rrr.c
 
-CFLAGS      = -Wall -Wextra -Werror
+CFLAGS      = -Wall -Wextra -Werror -g
 
 NAME        = push_swap
 

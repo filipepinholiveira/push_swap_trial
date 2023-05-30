@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include "library/LIBFT/ft_libft/libft.h"
+#include "library/FT_PRINTF/ft_printf.h"
 
 typedef struct s_stack_node
 {
@@ -23,5 +24,7 @@ void	ra(t_stack_node **a_head, int flag);
 void	rb(t_stack_node **b_head, int flag);
 void	rr(t_stack_node **a_head, t_stack_node **b_head, int flag );
 void	rra(t_stack_node **a_head, int flag);
+void	rrb(t_stack_node **b_head, int flag);
+void	rrr(t_stack_node **a_head, t_stack_node **b_head, int flag);
 
 #endif
