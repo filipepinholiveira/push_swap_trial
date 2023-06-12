@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 18:36:03 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/24 18:54:08 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/12 16:52:01 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	pb(t_stack_node **a_head, t_stack_node **b_head, int flag)
 {
 
-	if (!a_head || *a_head == NULL)
-		return;
-	if (!b_head || *b_head == NULL)
-		return;
+	// if (!a_head || *a_head == NULL)
+	// 	return;
+	// if (!b_head || *b_head == NULL)
+	// 	return;
 
 	t_stack_node *start;
 	
@@ -38,7 +38,9 @@ void	pb(t_stack_node **a_head, t_stack_node **b_head, int flag)
 	
 	*b_head = start; // head aponta a 1
 	start->next = ptr_b; // start qeu e 4 aponta a 1
-
+	if (ptr_b != NULL)
+		ptr_b->prev = start; // start qeu e 4 aponta a 1
+	
 	*a_head = ptr_a;
 	
 	if (flag == 0)

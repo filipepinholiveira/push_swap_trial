@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:45:09 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/24 18:44:10 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:06:50 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	pa(t_stack_node **a_head, t_stack_node **b_head, int flag)
 {
 
-	if (!a_head || *a_head == NULL)
-		return;
-	if (!b_head || *b_head == NULL)
-		return;
+	// if (!a_head || *a_head == NULL)
+	// 	return;
+	// if (!b_head || *b_head == NULL)
+	// 	return;
 	
 	t_stack_node *start;
 	
