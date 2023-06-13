@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/12 18:19:18 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/13 18:11:01 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,18 +90,10 @@ int main(int ac, char **av)
 	puts("");
 	printf("Lista A: \n");
 	
-	
-	pb(a_head, b_head, 0);
-	pb(a_head, b_head, 0);
+	//ra(a_head, 0);
+	ra(a_head, 0);
 	rra(a_head, 0);
-	rrb(b_head, 0);
-	// rb(b_head, 0);
-	// pb(a_head, b_head, 0);
-	// pb(a_head, b_head, 0);
-	// ra(a_head, 0);
-	// pb(a_head, b_head, 0);
-	// ra(a_head, 0);
-	// pb(a_head, b_head, 0);
+	
 	
 	while (*a_head)
 	{

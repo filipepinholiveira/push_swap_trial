@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 17:57:06 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/05/29 18:07:18 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/13 18:00:00 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	ra(t_stack_node **a_head, int flag)
 		return ;
 	t_stack_node *temp = (*a_head);
 	(*a_head) = (*a_head)->next;
+	(*a_head)->prev = NULL;
 	t_stack_node *current = (*a_head);
 	while (current->next != NULL)
 	{
