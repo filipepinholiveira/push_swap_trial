@@ -6,42 +6,11 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/13 18:11:01 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/15 18:06:26 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-t_stack_node	*ft_lstlast_push(t_stack_node *lst)
-{
-	t_stack_node	*current;
-
-	current = lst;
-	while (current != NULL)
-	{
-		if (current->next == NULL)
-			return (current);
-		current = current->next;
-	}
-	return (current);
-}
-
-void	ft_lstadd_push(t_stack_node **lst, t_stack_node *new)
-{
-	t_stack_node	*nova;
-
-	nova = *lst;
-	if (!new)
-		return ;
-	if (!*lst)
-	{
-		*lst = new;
-		return ;
-	}
-	nova = ft_lstlast_push(*lst);
-	nova->next = new;
-	new->prev = nova;
-}
 
 
 int main(int ac, char **av)
@@ -90,10 +59,7 @@ int main(int ac, char **av)
 	puts("");
 	printf("Lista A: \n");
 	
-	//ra(a_head, 0);
-	ra(a_head, 0);
-	rra(a_head, 0);
-	
+	sa(a_head, 0);
 	
 	while (*a_head)
 	{
