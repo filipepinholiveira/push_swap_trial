@@ -28,5 +28,7 @@ void	rrb(t_stack_node **b_head, int flag);
 void	rrr(t_stack_node **a_head, t_stack_node **b_head, int flag);
 void	ft_lstadd_push(t_stack_node **lst, t_stack_node *new);
 t_stack_node	*ft_lstlast_push(t_stack_node *lst);
+t_stack_node	*ft_lstadd_front(t_stack_node **lst, t_stack_node *new);
+t_stack_node	*ft_lstnew(int data);
 
 #endif

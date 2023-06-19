@@ -10,6 +10,15 @@
 CC          = cc
 SRCS        = push_swap.c \
 			  sa.c \
+			  sb.c \
+			  ss.c \
+			  pa.c \
+			  pb.c \
+			  ra.c \
+			  rb.c \
+			  rr.c \
+			  rra.c \
+			  rrb.c \
 			  utils.c
 
 CFLAGS      = -Wall -Wextra -Werror -g

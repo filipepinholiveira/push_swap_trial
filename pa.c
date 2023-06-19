@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rra.c                                              :+:      :+:    :+:   */
+/*   pa.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/29 18:12:45 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/13 18:40:12 by fpinho-d         ###   ########.fr       */
+/*   Created: 2023/06/19 14:33:19 by fpinho-d          #+#    #+#             */
+/*   Updated: 2023/06/19 18:00:17 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rra(t_stack_node **a_head, int flag)
+void	pa(t_stack_node **a_head, t_stack_node **b_head, int flag)
 {
-	if (*a_head == NULL || (*a_head)->next == NULL)
-		return ;
-	t_stack_node *current = NULL;
-	t_stack_node *temp = NULL;
-	current = (*a_head);
-	while (current->next != NULL)
-		current = current->next;
-	temp = current;
-	current->prev->next = NULL;
-	current = (*a_head);
-	temp->next = current;
-	(*a_head) = temp;
+
+	if (!a_head || *a_head == NULL)
+	 	return;
+	if (!b_head || *b_head == NULL)
+	 	return;
+
+	t_stack_node *ptr = NULL;
+	
+    ptr = ft_lstadd_front(a_head, ft_lstnew((*b_head)->data));
+    (*a_head) = ptr;
+	(*a_head)->prev = NULL;
+	if ((*a_head)->next != NULL)
+		(*a_head)->next->prev = (*a_head);
+    (*b_head) = (*b_head)->next;
+    (*b_head)->prev = NULL;
 	if (flag == 0)
-		printf("rra\n");
+		ft_printf("pa\n");
 }
