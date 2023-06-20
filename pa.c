@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 14:33:19 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/19 18:00:17 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:17:26 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,13 @@ void	pa(t_stack_node **a_head, t_stack_node **b_head, int flag)
 	(*a_head)->prev = NULL;
 	if ((*a_head)->next != NULL)
 		(*a_head)->next->prev = (*a_head);
-    (*b_head) = (*b_head)->next;
-    (*b_head)->prev = NULL;
+	if ((*b_head)->next != NULL)
+	{
+    	(*b_head) = (*b_head)->next;
+    	(*b_head)->prev = NULL;
+	}
+	else
+		(*b_head) = NULL;
 	if (flag == 0)
 		ft_printf("pa\n");
 }

@@ -30,5 +30,9 @@ void	ft_lstadd_push(t_stack_node **lst, t_stack_node *new);
 t_stack_node	*ft_lstlast_push(t_stack_node *lst);
 t_stack_node	*ft_lstadd_front(t_stack_node **lst, t_stack_node *new);
 t_stack_node	*ft_lstnew(int data);
+int	ft_atoi(const char *str);
+void	ft_error(void);
+t_stack_node	*ft_create_node(int ac, char **av, t_stack_node ** head);
+t_stack_node	*ft_arg_is_str(char ** av, t_stack_node ** head);
 
 #endif
