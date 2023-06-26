@@ -34,5 +34,7 @@ int	ft_atoi(const char *str);
 void	ft_error(void);
 t_stack_node	*ft_create_node(int ac, char **av, t_stack_node ** head);
 t_stack_node	*ft_arg_is_str(char ** av, t_stack_node ** head);
+int ft_checkduplicate (s_stack_node *a);
+int ft_checksorted(s_stack_node *a);
 
 #endif

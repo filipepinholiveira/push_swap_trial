@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fpinho-d <fpinho-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/20 17:32:04 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/26 18:51:09 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,17 @@ int main(int ac, char **av)
 	a = NULL;
 	
 	a = ft_create_node(ac, av, a_head);
-
+	if (!a || ft_checkduplicate(a)) // juntar funçao para verificar listas duplicadas(ft_checkduplicate(a))
+	{
+		// dar free (ft_free(a))
+		ft_error;
+	}
+	/*
+	if (!ft_checksorted(a)) verificar se lista ja esta ordenada
+		ft_sort(&a);
+	ft_free(a)
+	*/
+	
 	puts("");
 	
 	ft_printf("Lista A: \n");
@@ -35,10 +45,5 @@ int main(int ac, char **av)
 	 	(*a_head) = (*a_head)->next;
 	}
 	puts("");
-	// printf("Lista B: \n");
-	// while (*b_head)
-	// {
-	// 	printf("%d\n", ((*b_head)->data));
-	//  	(*b_head) = (*b_head)->next;
-	// }
+	return (0);
 }
