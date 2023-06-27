@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 14:32:32 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/19 15:11:56 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/27 18:18:09 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	ss(t_stack_node **a_head, t_stack_node **b_head, int flag)
 {
 	if (*a_head == NULL || (*a_head)->next == NULL)
-		return;
+		return ;
 	if (*b_head == NULL || (*b_head)->next == NULL)
-		return;
+		return ;
 	sa(a_head, 1);
 	sb(b_head, 1);
 	if (flag == 0)

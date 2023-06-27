@@ -23,7 +23,9 @@ SRCS        = push_swap.c \
 			  utils.c \
 			  utils2.c \
 			  createlist.c \
-			  checklistvalues.c
+			  list_op.c \
+			  checklistvalues.c \
+			  sorting.c
 
 CFLAGS      = -Wall -Wextra -Werror -g
 

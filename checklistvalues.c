@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   checklistvalues.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpinho-d <fpinho-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 18:29:58 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/26 18:45:42 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/27 18:46:03 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_checkduplicate (s_stack_node *a)
+int ft_checkduplicate (t_stack_node *a)
 {
-    s_stack_node *tmp;
+    t_stack_node    *tmp;
 
     while (a)
     {
         tmp = a->next;
         while (tmp)
         {
-            if (tmp->data == a->data)
+            if (a->data == tmp->data)
                 return (1);
             tmp = tmp->next;
         }
@@ -29,10 +29,10 @@ int ft_checkduplicate (s_stack_node *a)
     }
     return (0);
 }
+    
+    
 
-
-
-int ft_checksorted(s_stack_node *a)
+int ft_checksorted(t_stack_node *a)
 {
     int i;
 
@@ -46,5 +46,4 @@ int ft_checksorted(s_stack_node *a)
     }
     return (1);
 }
-
-
+    

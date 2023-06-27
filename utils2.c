@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 16:45:03 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/20 16:48:04 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/27 18:40:33 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,19 @@ void	ft_error(void)
 {	
 	write (2, "Error\n", 6);
 	exit(1);
+}
+
+void	ft_free(t_stack_node *head)
+{
+	t_stack_node	*tmp;
+
+	if (!head)
+		return ;
+	while (head)
+	{
+		tmp = (head)->next;
+		(head)->data = 0;
+		free(head);
+		head = tmp;
+	}
 }

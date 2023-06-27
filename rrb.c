@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:47:11 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/19 18:28:44 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/27 18:19:26 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 void	rrb(t_stack_node **b_head, int flag)
 {
+	t_stack_node	*current;
+	t_stack_node	*last;
+
 	if (*b_head == NULL || (*b_head)->next == NULL)
 		return ;
-	t_stack_node *current = NULL;
-	t_stack_node *last = NULL;
+	current = NULL;
+	last = NULL;
 	current = (*b_head);
 	while (current->next != NULL)
 		current = current->next;
