@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:42:17 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/27 18:36:10 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:29:42 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int ac, char **av)
 {
 	t_stack_node **a_head;
+	t_stack_node **b_head;
 	
 	int	i;
 	i = 1;
@@ -27,17 +28,13 @@ int	main(int ac, char **av)
 	}
 	if (!ft_checksorted(*a_head))
 	{
-		ft_sort(*a_head);
-		printf("fazer sort\n");
+		ft_sort(a_head);
 	}
-	puts("");
-	ft_printf("Lista A: \n");	
-	while (*a_head)
+	else
 	{
-		ft_printf("%d\n", ((*a_head)->data));
-		(*a_head) = (*a_head)->next;
+		ft_printf("Sorted\n");
 	}
-	puts("");
-	ft_free(*a_head);
+	// puts("");
+	// ft_free(*a_head);
 	return (0);
 }

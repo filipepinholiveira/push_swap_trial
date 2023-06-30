@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 18:20:49 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/27 18:26:49 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:33:12 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,9 @@ t_stack_node		*ft_arg_is_str(char **av, t_stack_node **head);
 int		ft_checkduplicate(t_stack_node *a);
 int		ft_checksorted(t_stack_node *a);
 void	ft_free(t_stack_node *head);
-void	ft_sort(t_stack_node *stack_a);
+void	ft_sort(t_stack_node **stack_a);
 int		ft_lstsize(t_stack_node *head);
+t_stack_node	*ft_sort_b(t_stack_node **stack_a);
+void	ft_sort_b_till_3(t_stack_node **stack_a, t_stack_node **stack_b);
 
 #endif
