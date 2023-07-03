@@ -25,7 +25,11 @@ SRCS        = push_swap.c \
 			  createlist.c \
 			  list_op.c \
 			  checklistvalues.c \
-			  sorting.c
+			  sorting.c \
+			  stack_a_rotate.c \
+			  algorithm_ab.c \
+			  node_utils.c \
+			  node_utils_2.c
 
 CFLAGS      = -Wall -Wextra -Werror -g
 

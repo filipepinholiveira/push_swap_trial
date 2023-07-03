@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 18:20:49 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/06/30 18:33:12 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/07/03 17:02:37 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 typedef struct s_stack_node
 {
 	int	data;
+	int	index;
 	struct s_stack_node	*prev;
 	struct s_stack_node	*next;
 }	t_stack_node;
@@ -52,6 +53,15 @@ void	ft_free(t_stack_node *head);
 void	ft_sort(t_stack_node **stack_a);
 int		ft_lstsize(t_stack_node *head);
 t_stack_node	*ft_sort_b(t_stack_node **stack_a);
+int	ft_find_place_b(t_stack_node *stack_b, int nbr_push);
+t_stack_node	*ft_lstlast(t_stack_node *lst);
+int	ft_find_index(t_stack_node *stack_a, int nbr);
+int	ft_min(t_stack_node *stack_a);
+int	ft_max(t_stack_node *stack_a);
 void	ft_sort_b_till_3(t_stack_node **stack_a, t_stack_node **stack_b);
+int	ft_stack_a_rotate_and_send_b(t_stack_node *stack_a, t_stack_node *stack_b);
+int	ft_algorithm_rrarrb(t_stack_node *stack_a, t_stack_node *stack_b, int c);
+int	ft_algorithm_rarb(t_stack_node *stack_a, t_stack_node *stack_b, int c);
+
 
 #endif
