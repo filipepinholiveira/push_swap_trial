@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 16:11:00 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/07/03 17:02:28 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/07/04 16:03:37 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ int	ft_stack_a_rotate_and_send_b(t_stack_node *stack_a, t_stack_node *stack_b)
 	{
 		if (i > ft_algorithm_rarb(stack_a, stack_b, tmp->data))
 			i = ft_algorithm_rarb(stack_a, stack_b, tmp->data);
+		if (i > ft_algorithm_rrarrb(stack_a, stack_b, tmp->data))
+			i = ft_algorithm_rrarrb(stack_a, stack_b, tmp->data);
+		if (i > ft_algorithm_rarrb(stack_a, stack_b, tmp->data))
+			i = ft_algorithm_rarrb(stack_a, stack_b, tmp->data);
+		if (i > ft_algorithm_rrarb(stack_a, stack_b, tmp->data))
+			i = ft_algorithm_rrarb(stack_a, stack_b, tmp->data);
+		tmp = tmp->next;
 	}
 	return (i);
 }

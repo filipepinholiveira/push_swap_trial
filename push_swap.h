@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 18:20:49 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/07/03 18:58:57 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/07/04 16:02:55 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	ft_sort_b_till_3(t_stack_node **stack_a, t_stack_node **stack_b);
 int	ft_stack_a_rotate_and_send_b(t_stack_node *stack_a, t_stack_node *stack_b);
 int	ft_algorithm_rrarrb(t_stack_node *stack_a, t_stack_node *stack_b, int c);
 int	ft_algorithm_rarb(t_stack_node *stack_a, t_stack_node *stack_b, int c);
-
+int	ft_algorithm_rarrb(t_stack_node *stack_a, t_stack_node *stack_b, int c);
+int	ft_algorithm_rrarb(t_stack_node *stack_a, t_stack_node *stack_b, int c);
 
 #endif

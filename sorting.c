@@ -6,7 +6,7 @@
 /*   By: fpinho-d <fpinho-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/27 16:47:39 by fpinho-d          #+#    #+#             */
-/*   Updated: 2023/07/03 19:00:33 by fpinho-d         ###   ########.fr       */
+/*   Updated: 2023/07/04 16:04:43 by fpinho-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	ft_sort_b_till_3(t_stack_node **stack_a, t_stack_node **stack_b)
 	{
 		tmp = *stack_a;
 		i = ft_stack_a_rotate_and_send_b(*stack_a, *stack_b);
-		// while (i >= 0)
-		// {
+		while (i >= 0)
+		{
 			
-		// }
+		}
 		
 	}
 	
